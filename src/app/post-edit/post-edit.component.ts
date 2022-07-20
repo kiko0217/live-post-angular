@@ -55,7 +55,8 @@ export class PostEditComponent implements OnInit {
       description,
       imagePath,
       "test@test.com",
-      new Date()
+      new Date(),
+      0
     )
     if(this.index){
       this.postService.updatePost(this.index, post)

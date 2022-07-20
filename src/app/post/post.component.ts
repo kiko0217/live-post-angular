@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
 
@@ -26,5 +26,8 @@ export class PostComponent implements OnInit {
   onEdit() {
     console.log('onEdit called')
     this.router.navigate(['/post-edit', this.index])
+  }
+  likePost() {
+    this.postService.likePost(this.index)
   }
 }
